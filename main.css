@@ -1,0 +1,97 @@
+/* #gallow {
+    height: 600px;
+    width: 900px;
+    margin-top: -90px;
+} */
+
+
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+body {
+    font-family: 'Indie Flower', cursive;
+}
+
+header {
+    text-align: center;
+    position: relative;
+}
+
+#guess {
+    display: inline;
+    position: absolute;
+    top: 690px;
+    left: 800px;
+}
+
+p {
+    display: inline;
+    font-size: 90px;
+
+}
+
+.alphabet span {
+    font-size: 35px;
+    margin: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 7px;
+    display: inline-block;
+}
+
+.alphabet {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#gallow {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+span {
+    cursor: pointer;
+    visibility: hidden;
+}
+
+button {
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    margin: 10px;
+    border-style: black solid 2px;
+    border-radius: 10px;
+    box-shadow: none;
+    outline: none;
+    position: absolute;
+    top: 400px;
+    left: 800px;
+}
+
+.headSize {
+    height: 600px;
+    width: 500px;
+}
+
+.man {
+    position: absolute;
+    left: 450px;
+    top: 270px;
+
+}
+
+button::-moz-focus-inner {
+    border: 0;
+  }
+  
+  
+
