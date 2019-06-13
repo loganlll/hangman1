@@ -40,7 +40,7 @@ class Hangman {
 
         if (!wordToArray.includes(guess) && this.numberOfGuesses <= 5 && guess.length <= 1) {
             this.numberOfGuesses++
-            document.querySelector('.man').setAttribute('src', `img/${this.numberOfGuesses}.png`)
+            document.querySelector('#gallow').setAttribute('src', `img/${this.numberOfGuesses}.png`)
             this.remainingGuesses--
 
             if (span.tagName === 'SPAN') {

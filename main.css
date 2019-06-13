@@ -1,9 +1,3 @@
-/* #gallow {
-    height: 600px;
-    width: 900px;
-    margin-top: -90px;
-} */
-
 
 * {
     -webkit-user-select: none;
@@ -11,9 +5,86 @@
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
+    font-family: 'Indie Flower', cursive;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 15% 55% 10% 20%;
+}
+
+header {
+    grid-column: 1 / 5;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-size: 5rem;
+}
+
+.gallow {
+    grid-column: 1 / 5;
+    display: grid;
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.button {
+    grid-column: 1 / 5;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+button {
+    height: 4rem;
+    width: 10rem;
+    border: none;
+    cursor: pointer;
+    background: rgb(185, 185, 185);
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.3rem;
+}
+
+button:active {
+    background: rgb(151, 151, 151);
+}
+
+#gallow {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    height: 24rem;
+    grid-column: 1 / 5;
+    padding-left: 4rem;
+}
+
+.alphabet {
+    grid-column: 1 / 5;
+    font-size: 3rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat( auto-fit, minmax(1rem, 1fr) );
+    padding: 0 1rem;
+}
+
+#guess {
+    grid-column: 3 / 5;
+    font-size: 2rem;
+    display: grid;
+    align-content: flex-end;
+    grid-template-columns: repeat( auto-fit, minmax(5rem, 1fr) );
+}
+
+/* body {
     font-family: 'Indie Flower', cursive;
 }
 
@@ -91,7 +162,7 @@ button {
 
 button::-moz-focus-inner {
     border: 0;
-  }
+  } */
   
   
 

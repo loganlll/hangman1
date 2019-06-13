@@ -13,11 +13,17 @@
         <p>HANGMAN</p>
     </header>
     <div class="gallow">
-        <img id="gallow" src="img/gallow1.png" alt="" draggable="false">
-        <img class="man" src="" alt="">
-        <button>Click to start</button>
-
+        <div class="gallow__pic">
+                <img id="gallow" src="img/gallow1.png" alt="" draggable="false">
+                <img class="man" src="" alt="">
+        </div>
+        <div id="guess">
+        </div>
     </div>
+    <div class="button">
+        <button>Click to start</button>
+    </div>
+
     <div class="alphabet" class="hidden">
         <span id="a">A</span>
         <span>B</span>
@@ -46,8 +52,7 @@
         <span>Y</span>
         <span>Z</span>
     </div>
-    <div id="guess">
-    </div>
+
 
 
     <script src="main.js"></script>
