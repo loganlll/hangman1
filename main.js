@@ -38,7 +38,8 @@ class Hangman {
         })
 
 
-        if (!wordToArray.includes(guess) && this.numberOfGuesses <= 5 && guess.length <= 1) {
+
+        if (!wordToArray.includes(guess) && this.numberOfGuesses <= 5 && guess.length <= 1 && buttonClicked) {
             this.numberOfGuesses++
             document.querySelector('#gallow').setAttribute('src', `img/${this.numberOfGuesses}.png`)
             this.remainingGuesses--
@@ -46,6 +47,8 @@ class Hangman {
             if (span.tagName === 'SPAN') {
                 span.style.color = 'red'
             }
+
+        
 
 
         }
@@ -70,8 +73,43 @@ class Hangman {
             })
         }
 
+        let pArray = []
+        document.getElementById('guess').childNodes.forEach(function (p) {
+            if (p.nodeType === 1 && p.textContent !== '_') {
+                pArray.push(p.textContent)
+                console.log(pArray)
+            }
+        })
+        if (pArray.length === this.word.length) {
+            let youWon = function () {
+                document.querySelector('#guess').innerHTML = ''
+                var x = document.createElement("p");
+                var t = document.createTextNode('You won!');
+                x.appendChild(t);
+                document.querySelector('#guess').appendChild(x);
+                document.querySelector('#guess').id = 'guess-won'
 
 
+                document.querySelector('#gallow').setAttribute('src', `img/7.png`)
+                document.querySelector('button').innerHTML = 'Restart'
+                button.addEventListener('click', () => {
+                    location.reload();
+                    this.setBlanks()
+                    // let man = document.querySelector('.man')
+                    // man.parentNode.removeChild(man)
+                    // let newGame = new Hangman(randomWord(), 6)
+                    // document.querySelector('#guess').innerHTML = ''
+                    // this.numberOfGuesses = 0;
+                    // this.setBlanks()
+                })
+
+            }
+            setTimeout(youWon, 600)
+
+        }
+
+
+        
     }
 
 
@@ -90,10 +128,10 @@ button.addEventListener('click', function () {
     document.querySelectorAll('span').forEach(function (spanItem) {
         spanItem.style.visibility = 'visible'
     })
-
 })
 
 document.querySelector('.alphabet').addEventListener('click', function (e) {
     // console.log(e)
     game1.makeGuess(e.target.textContent.toLowerCase(), e.target)
+
 })
